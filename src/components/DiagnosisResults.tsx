@@ -1,6 +1,8 @@
 import { ArrowLeft, CheckCircle, AlertTriangle, FileText, UserCheck, TrendingUp, Brain, Info, Activity } from 'lucide-react';
 import { Screen } from '../lib/types';
 import { scrollToTop } from './ScrollToTop';
+import Vidbox from './icon/vid_box';
+import LogoIcon from './icon/logo';
 
 // Matches the API response structure
 export interface DiagnosisResponse {
@@ -68,7 +70,7 @@ export function DiagnosisResults({ onNavigate, caseData }: DiagnosisResultsProps
           </button>
 
           <div className="flex items-center gap-3">
-              <span className="text-white text-2xl">🌷</span>
+              <LogoIcon />
             <div>
               <span className="text-2xl text-[#29516a]">Tulip</span>
               <p className="text-xs text-gray-600">Diagnosis Report</p>
@@ -216,7 +218,7 @@ export function DiagnosisResults({ onNavigate, caseData }: DiagnosisResultsProps
               </p>
               <button
                 onClick={() => onNavigate('audit')}
-                className="px-8 py-4 bg-gradient-to-r from-[#29516a] to-teal-500 text-white rounded-xl hover:shadow-xl transition-all transform hover:scale-105"
+                className="px-8 py-4 bg-[#29516a] text-white rounded-xl hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Show Audit
               </button>
@@ -231,7 +233,7 @@ export function DiagnosisResults({ onNavigate, caseData }: DiagnosisResultsProps
             className="backdrop-blur-xl bg-white/40 p-8 rounded-2xl border border-white/30 shadow-lg hover:shadow-xl transition-all cursor-pointer group"
           >
             <div className="w-16 h-16 bg-white/50 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <span className="text-4xl">📹</span>
+              <Vidbox />
             </div>
             <h3 className="text-xl mb-2 text-[#29516a]">Discuss with AI Doctor</h3>
             <p className="text-sm text-gray-600">Have questions about your diagnosis?</p>

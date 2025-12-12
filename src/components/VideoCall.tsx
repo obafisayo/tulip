@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Mic, MicOff, Video, VideoOff, Phone, MessageCircle, X, Maximize2 } from 'lucide-react';
 import { Screen } from '../lib/types';
+import { scrollToTop } from './ScrollToTop';
 
 interface VideoCallProps {
   onNavigate: (screen: Screen) => void;
@@ -11,6 +12,7 @@ export function VideoCall({ onNavigate }: VideoCallProps) {
   const [isVideoOff, setIsVideoOff] = useState(false);
   const [showTranscript, setShowTranscript] = useState(false);
   const [callDuration, setCallDuration] = useState(0);
+  scrollToTop();
 
   useEffect(() => {
     const interval = setInterval(() => {

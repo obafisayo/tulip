@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Mic, Phone, MessageSquare, AlertCircle, ArrowLeft, User } from 'lucide-react';
 import { Screen } from '../lib/types';
+import { scrollToTop } from './ScrollToTop';
+import nurse from "../assets/img1.png";
 
 interface VoiceCallProps {
   onNavigate: (screen: Screen) => void;
@@ -13,8 +15,9 @@ export function VoiceCall({ onNavigate }: VoiceCallProps) {
   const [currentNurse] = useState({
     name: 'Sarah Mitchell',
     specialty: 'Triage Specialist',
-    image: 'https://images.unsplash.com/photo-1676552055618-22ec8cde399a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxudXJzZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDF8fHx8MTc2NTQ2MTYyNnww&ixlib=rb-4.1.0&q=80&w=1080'
+    image: nurse
   });
+  // scrollToTop();
 
   useEffect(() => {
     if (isListening) {

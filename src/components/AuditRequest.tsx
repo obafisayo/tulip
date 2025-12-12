@@ -3,6 +3,7 @@ import { ArrowLeft, Shield, Calendar, TrendingUp, ChevronRight, Loader2, AlertCi
 import { Screen } from '../lib/types';
 import { BaseRequest } from '../lib';
 import { scrollToTop } from './ScrollToTop';
+import LogoIcon from './icon/logo';
 
 interface AuditRequestProps {
   onNavigate: (screen: Screen) => void;
@@ -117,7 +118,7 @@ export function AuditRequest({ onNavigate }: AuditRequestProps) {
             </button>
 
             <div className="flex items-center gap-3">
-                <span className="text-white text-2xl">🌷</span>
+              <LogoIcon />
               <div>
                 <span className="text-2xl text-[#29516a]">Tulip</span>
                 <p className="text-xs text-gray-600">Diagnosis Details</p>
@@ -192,7 +193,7 @@ export function AuditRequest({ onNavigate }: AuditRequestProps) {
           </button>
 
           <div className="flex items-center gap-3">
-              <span className="text-white text-2xl">🌷</span>
+            <LogoIcon />
             <div>
               <span className="text-2xl text-[#29516a]">Tulip</span>
               <p className="text-xs text-gray-600">Past Diagnoses</p>
